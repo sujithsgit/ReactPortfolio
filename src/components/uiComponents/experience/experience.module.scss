@@ -1,0 +1,232 @@
+// experience.module.scss
+
+.section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionAlt {
+  // background: rgba(30, 41, 59, 0.3);
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: fadeInDown 0.8s ease-out;
+
+  svg {
+    color: #10B981;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #60a5fa, #a855f7);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.experienceCard {
+  background: #10B981;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1px solid rgba(71, 85, 105, 0.3);
+  animation: fadeInUp 0.8s ease-out;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.15);
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.experienceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.experienceTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+
+  margin-bottom: 0.5rem;
+
+}
+
+.experienceCompany {
+  font-size: 1.25rem;
+  color: #ffff;
+  font-weight: 500;
+  text-align: left;
+}
+
+.experiencePeriod {
+  color: #ffff;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  background: rgba(30, 41, 59, 0.3);
+  border-radius: 20px;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.experienceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experienceItem {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #ffff;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  animation: slideInLeft 0.6s ease-out;
+  animation-fill-mode: both;
+  text-align: justify;
+
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  &::before {
+    content: '•';
+    color: #60a5fa;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    font-weight: bold;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .experienceCard {
+    padding: 1.5rem;
+  }
+
+  .experienceHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .experienceTitle {
+    font-size: 1.5rem;
+  }
+
+  .experienceCompany {
+    font-size: 1.1rem;
+  }
+
+  .experiencePeriod {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .experienceItem {
+    font-size: 0.95rem;
+    gap: 0.75rem;
+
+    &::before {
+      font-size: 1.2rem;
+    }
+  }
+}
