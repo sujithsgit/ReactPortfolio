@@ -1,6 +1,6 @@
 // Education.jsx
 import React from 'react';
-import { GraduationCap, Award, Calendar } from 'lucide-react';
+import { GraduationCap, Award, Calendar, Download, FileText } from 'lucide-react';
 import styles from './education.module.scss';
 
 const Education = () => {
@@ -79,6 +79,32 @@ const Education = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Download Resume Card */}
+                <div className={`${styles.educationCard} ${styles.resumeCard}`}>
+                    <div className={styles.resumeContent}>
+                        <div className={styles.resumeIcon}>
+                            <FileText size={48} />
+                        </div>
+                        <h3 className={styles.resumeTitle}>Download Resume</h3>
+                        <p className={styles.resumeDescription}>
+                            Get a copy of my complete resume with all details about my experience, skills, and projects.
+                        </p>
+                        <a 
+                            // href="/assets/SujithResumae.pdf" 
+                            // download="Sujith_R_Resume.pdf"
+
+
+                            href="/assets/Cv_Sujith.pdf" 
+                            download="Cv_Sujith.pdf"
+
+                            className={styles.downloadBtn}
+                        >
+                            <Download size={20} />
+                            Download PDF
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

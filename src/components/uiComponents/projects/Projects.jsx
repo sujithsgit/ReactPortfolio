@@ -16,8 +16,9 @@ const Projects = () => {
         {
             title: 'Habit Tracker Application',
             period: 'Nov 2025 - Jan 2026',
-            tech: ['Spring Boot', 'React.js',"Java", 'MySQL', 'REST APIs',],
-            description: 'Developed a full-stack Daily Resolution & Habit Tracker application using Java (Spring Boot) and React.js. Designed and implemented RESTful APIs for CRUD operations. Followed layered architecture with proper validation, exception handling, and database persistence.',
+             link: 'https://ds-tracker-frontend.vercel.app/',
+            tech: ['Spring Boot', 'React.js',"Java", 'MySQL', 'REST APIs', 'Redux'],
+            description: 'Developed a full-stack habit tracking system to create and monitor daily resolutions.Implemented backend using Spring Boot with Controller → Service → Repository (DAO) architecture and RESTful APIs.Built React.js frontend with Redux Toolkit and Redux-Saga for efficient state management.Designed MySQL database with User, Resolution, and ResolutionLog tables for daily tracking and streak calculation.Integrated JWT-based authentication, reminders, and progress tracking features',
             highlights: ['Full-Stack Development', 'RESTful APIs', 'Database Design', 'Clean Architecture']
         }
     ];
