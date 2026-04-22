@@ -69,7 +69,7 @@ const Education = () => {
                         <Award size={28} className={styles.certIcon} />
                         <h3 className={styles.certificationTitle}>Certifications</h3>
                     </div>
-                    
+
                     {certifications.map((cert, index) => (
                         <div key={index} className={styles.certificationItem}>
                             <span className={styles.certEmoji}>{cert.icon}</span>
@@ -91,7 +91,7 @@ const Education = () => {
                         <p className={styles.resumeDescription}>
                             Get a copy of my complete resume with all details about my experience, skills, and projects.
                         </p>
-                        <a 
+                        {/* <a 
                             // href="/assets/SujithResumae.pdf" 
                             // download="Sujith_R_Resume.pdf"
 
@@ -99,6 +99,11 @@ const Education = () => {
                             href="/assets/Cv_Sujith.pdf" 
                             download="Cv_Sujith.pdf"
 
+                            className={styles.downloadBtn}
+                        > */}
+                        <a
+                            href={process.env.PUBLIC_URL + "/assets/Cv_Sujith.pdf"}
+                            download="Cv_Sujith.pdf"
                             className={styles.downloadBtn}
                         >
                             <Download size={20} />
